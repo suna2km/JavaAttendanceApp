@@ -12,7 +12,6 @@ public class Student {
 
     /**
      * Constructor for the Student class.
-     * Initializes a new student with a name and seat number.
      */
     public Student(String name, int seatNumber) {
         this.name = name;
