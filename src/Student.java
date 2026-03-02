@@ -69,16 +69,21 @@ public class Student {
 
         switch (status) {
             case 1:
+                onTime++;
+                break;
+            case 2:
+                late++;
+                break;
+            case 3:
+                excused++;
+                break;
+            case 4:
+                unexcused++;
+                break;
+            default:
+                throw new Exception("Invalid status = " + status);
+
         }
-        if (status == 1)
-            onTime++;
-        else if (status == 2)
-            late++;
-        else if (status == 3)
-            excused++;
-        else if (status == 4)
-            unexcused++;
-        else throw new IllegalArgumentException("Invalid status for status #" + status + "!");
     }
 
     public void displayAttendance() {
