@@ -15,28 +15,37 @@ public class Student {
         unexcused = 0;
     }
 
-    public Student(int seat){
+    public Student(int seat) throws Exception {
         this();
-        this.seat = seat;
+        setSeat(seat);
     }
-    public Student (int seat, String name){
-        this.seat = seat;
-        this.name = name;
+    public Student (int seat, String name) throws Exception {
+        setSeat(seat);
+        setName(name);
     }
 
     public int getSeat() {
         return seat;
     }
 
-    public void setSeat(int seat) {
-        this.seat = seat;
+    public void setSeat(int seat) throws Exception {
+        if (seat > 1)
+            this.seat = seat;
+        else
+            throw new Exception("Invalid seat number #" + seat + " for name " + name + "!");
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name) throws Exception {
+        name = name.trim();
+
+        if (name.isBlank())
+            throw new Exception("Name cannot be blank for seat number #" + seat + "!");
+        else
+            this.name = name;
         this.name = name;
     }
 
