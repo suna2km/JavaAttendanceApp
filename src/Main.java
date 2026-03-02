@@ -1,11 +1,37 @@
 public class Main {
     public static void main(String[] args){
-        Student s1 = new Student();
-        Student s2 = new Student(1);
-        Student s3 = new Student(1, "Ben");
+        try {
+            Student s1 = new Student();
+            System.out.println(s1);
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
 
-        System.out.println(s1);
-        System.out.println(s2);
-        System.out.println(s3);
+        try {
+            Student s2 = new Student(-1);
+            System.out.println(s2);
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        try {
+            Student s2 = new Student(1);
+            System.out.println(s2);
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+        try{
+            Student s3 = new Student(1, "Ben");
+            System.out.println(s3);
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+
+
+
+
+
+
     }
 }
