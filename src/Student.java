@@ -57,7 +57,6 @@ public class Student {
         return late;
     }
 
-
     public int getExcused() {
         return excused;
     }
@@ -66,9 +65,28 @@ public class Student {
         return unexcused;
     }
 
+    public void updateAttendance(int status) throws Exception {
+
+        switch (status) {
+            case 1:
+        }
+        if (status == 1)
+            onTime++;
+        else if (status == 2)
+            late++;
+        else if (status == 3)
+            excused++;
+        else if (status == 4)
+            unexcused++;
+        else throw new IllegalArgumentException("Invalid status for status #" + status + "!");
+    }
+
+    public void displayAttendance() {
+
+    }
 
     @Override
     public String toString(){
-        return seat + " " + name;
+        return seat + ", " + name;
     }
 }
