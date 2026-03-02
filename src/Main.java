@@ -14,7 +14,7 @@ public class Main {
             System.out.println(e.getMessage());
         }
         try {
-            Student s2 = new Student(1);
+            Student s2 = new Student(1,"");
             System.out.println(s2);
         } catch (Exception e){
             System.out.println(e.getMessage());
