@@ -29,7 +29,7 @@ public class Student {
     }
 
     public void setSeat(int seat) throws Exception {
-        if (seat > 1)
+        if (seat > 0)
             this.seat = seat;
         else
             throw new Exception("Invalid seat number #" + seat + " for name " + name + "!");
@@ -69,6 +69,6 @@ public class Student {
 
     @Override
     public String toString(){
-        return seat + " " + name;
+        return "Seat #" + seat + " " + name;
     }
 }
