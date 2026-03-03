@@ -14,20 +14,19 @@ public class Main {
             System.out.println(e.getMessage());
         }
         try {
-            Student s2 = new Student(1,"");
-            System.out.println(s2);
-        } catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-
-        try{
-            Student s3 = new Student(1, "Ben");
+            Student s3 = new Student(1,"");
             System.out.println(s3);
         } catch (Exception e){
             System.out.println(e.getMessage());
         }
 
-
+        try{
+            Student s4 = new Student(1, "Ben");
+            System.out.println(s4);
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
 
     }
-}
+
+    }
