@@ -32,10 +32,15 @@ public class Main {
 
             s4.displayAttendance();
             //s4.updateAttendance(5);
-            System.out.println(s4.getOnTime());
+            Student s5 = new Student(1, "Ben");
+            System.out.println(s4.equals(s5));
+            System.out.println(s4 == s5);
+
         } catch (Exception e){
             System.out.println(e.getMessage());
         }
+
+
 
 
     }
