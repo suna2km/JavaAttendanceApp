@@ -6,7 +6,7 @@ public class Student {
     private int excused;
     private int unexcused;
 
-    public Student() {
+    private Student() {
         seat = 0;
         name = "unknown";
         onTime = 0;
@@ -58,11 +58,9 @@ public class Student {
     public void setName(String name) throws Exception {
         name = name.trim();
 
-        if (name.isBlank())
-            throw new Exception("Name cannot be blank for seat number #" + seat + "!");
-        else
-            this.name = name;
-        this.name = name;
+        if (name == null || name.isBlank())
+            throw new Exception("Student name cannot be Blank");
+        this.name = name.trim();
     }
 
     public void updateAttendance(int status) throws Exception {
@@ -81,7 +79,7 @@ public class Student {
                 unexcused++;
                 break;
             default:
-                throw new Exception("Invalid status = " + status);
+                throw new Exception("Invalid attendance status = " + status);
 
         }
     }
@@ -97,6 +95,7 @@ public class Student {
 
         return this.seat == other.getSeat();
     }
+
 
     @Override
     public String toString(){

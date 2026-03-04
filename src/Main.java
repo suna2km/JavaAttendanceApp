@@ -1,12 +1,6 @@
 public class Main {
     public static void main(String[] args){
-        try {
-            Student s1 = new Student();
-            System.out.println(s1);
-        } catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-
+        // test invalid jersey
         try {
             Student s2 = new Student(-1);
             System.out.println(s2);
@@ -14,7 +8,7 @@ public class Main {
             System.out.println(e.getMessage());
         }
         try {
-            Student s3 = new Student(1,"");
+            Student s3 = new Student(1, null);
             System.out.println(s3);
         } catch (Exception e){
             System.out.println(e.getMessage());
@@ -26,6 +20,17 @@ public class Main {
         } catch (Exception e){
             System.out.println(e.getMessage());
         }
+        // test update attendance
+        try{
+            Student s4 = new Student(1, "Ben");
+            s4.updateAttendance(1);
+            s4.updateAttendance(1);
+            //s4.updateAttendance(5);
+            System.out.println(s4.getOnTime());
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
 
     }
 
