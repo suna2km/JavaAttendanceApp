@@ -86,7 +86,7 @@ public class Student {
 
     public void displayAttendance() {
         System.out.println("Seat #" + seat + " " + name);
-        System.out.println("Ontime =" + onTime + " " + "Late +" + late + " " + "Execused =" + excused + " " + "Unexcused =" + unexcused);
+        System.out.println("Ontime =" + onTime + " " + "Late +" + late + " " + "Excused =" + excused + " " + "Unexcused =" + unexcused);
     }
     @Override
     public boolean equals(Object object){
