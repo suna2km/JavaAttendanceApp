@@ -25,6 +25,12 @@ public class Main {
             Student s4 = new Student(1, "Ben");
             s4.updateAttendance(1);
             s4.updateAttendance(1);
+            s4.updateAttendance(2);
+            s4.updateAttendance(2);
+            s4.updateAttendance(3);
+            s4.updateAttendance(4);
+
+            s4.displayAttendance();
             //s4.updateAttendance(5);
             System.out.println(s4.getOnTime());
         } catch (Exception e){
