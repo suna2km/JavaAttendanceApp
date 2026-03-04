@@ -6,7 +6,7 @@ public class Student {
     private int excused;
     private int unexcused;
 
-    public Student() {
+    private Student() {
         seat = 0;
         name = "unknown";
         onTime = 0;
