@@ -38,6 +38,48 @@ public class Course {
             throw new Exception("Seat #" + seat + " already assigned to " + student.getName() + "!");
         }
     }
+    public void displaySummaryReport() {
+        int totalOnTime = 0;
+        int totalLate = 0;
+        int totalExcused = 0;
+        int totalUnexcused = 0;
+
+        for (Student student : students) {
+            if (student != null) {
+                totalOnTime += student.getOnTime();
+                totalLate += student.getLate();
+                totalExcused += student.getExcused();
+                totalUnexcused += student.getUnexcused();
+            }
+        }
+
+        System.out.printf("%s OnTime=%d Late=%d Excused=%d Unexcused=%d%n",
+                name, totalOnTime, totalLate, totalExcused, totalUnexcused);
+    }
+
+    /**
+     * Displays a detailed attendance report for all students in the course.
+     */
+    public void displayDetailReport() {
+        displaySummaryReport(); // Print header
+
+        System.out.println("Seat   Name            OnTime Late Excused Unexcused");
+        System.out.println("==== =============== ====== ==== ======= =========");
+
+        for (Student student : students) {
+            if (student != null) {
+                System.out.printf("%4d %-15s %6d %4d %7d %9d%n",
+                        student.getSeat(),
+                        student.getName(),
+                        student.getOnTime(),
+                        student.getLate(),
+                        student.getExcused(),
+                        student.getUnexcused());
+            }
+        }
+        System.out.println();
+    }
+
     @Override
     public String toString() {
         return name;
