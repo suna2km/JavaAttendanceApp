@@ -175,6 +175,6 @@ Invalid input! Please enter a number between (1 - 4): 1
 - `Student.java`: Represents a student's seat assignment, name, and their individual attendance counters.
 - `Input.java`: Utility class containing validation logic for user input via standard `Scanner`.
 
-  **Authors:**
+  **Authors:**<br>
   Suna2km<br>
   Sanyam
