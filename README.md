@@ -176,5 +176,5 @@ Invalid input! Please enter a number between (1 - 4): 1
 - `Input.java`: Utility class containing validation logic for user input via standard `Scanner`.
 
   **Authors:**
-  Suna2km
+  Suna2km<br>
   Sanyam
