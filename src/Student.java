@@ -1,6 +1,6 @@
 /**
  * A Basketball Player and the player's stats.
- * @author suna2km + Sanyam Sood
+ * @author Suna Aregay + Sanyam Sood
  * @since 2026.03.06
  * @version 1.0 beta
  * @see <a href="https://github.com/suna2km/JavaAttendanceApp">GitHub Repository</a>
