@@ -2,9 +2,16 @@
 
 A command-line Java application for tracking student attendance across two course sections. This app is designed similarly to a basketball scoreboard, capturing daily attendance status (On Time, Late, Excused, Unexcused) and generating comprehensive attendance reports.
 
+<b>Table of Content</b>
+- [Features](#features)
+- [Usage](#usage)
+- [Application Screenshots (Sample Outputs)](#application-Screenshots-sample-outputs)
+- [Project Structure](#project-structure)
+- [New Concepts](#new-concepts)
+- [Maintainers](#maintainers)
 ---
 
-## 🚀 Features
+## Features
 
 - **Course Management:** Create and track attendance for exactly two course sections.
 - **Seat Assignments:** Enroll students dynamically by assigning them a valid seat number (1-55).
@@ -18,7 +25,7 @@ A command-line Java application for tracking student attendance across two cours
 
 ---
 
-## 🛠️ Usage
+## Usage
 
 To compile and run the application from the terminal:
 
@@ -32,7 +39,7 @@ java -cp out AttendanceApp
 
 ---
 
-## 📸 Application Screenshots (Terminal Flows)
+## Application Screenshots (Sample Outputs)
 
 ### 1. Successful Setup & Attendance Flow
 
@@ -168,13 +175,21 @@ Invalid input! Please enter a number between (1 - 4): 1
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 - `AttendanceApp.java`: Main entry point containing menu logic, course setup, and flow.
 - `Course.java`: Manages the list of students for a particular course section and computes aggregate attendance.
 - `Student.java`: Represents a student's seat assignment, name, and their individual attendance counters.
 - `Input.java`: Utility class containing validation logic for user input via standard `Scanner`.
 
-  **Authors:**<br>
-  Suna2km<br>
-  Sanyam
+## New Concepts
+
+- Using a switch to increment the appropriate attendance type while handling for invalid data.
+- Equals method to verify two students are the same by ONLY their seat number
+- Using the ArrayList.indexOf method to get a student by seat number
+- addPlayer method to avoid two students in the same seat
+- Trim method to remove leading and trailing spaces
+
+## Maintainers
+  [@suna2km](https://github.com/suna2km) Suna Aregay<br>
+  [@Starksood](https://github.com/Starksood) Sanyam
