@@ -30,7 +30,7 @@ public class Course {
         else
             return allStudents.get(index);
     }
-    public void addStudent(String name, int seat) throws Exception {
+    public void addStudent(int seat, String name) throws Exception {
         Student student = getStudent(seat);
         if(student == null) {
             allStudents.add(new Student(seat, name));
@@ -77,7 +77,7 @@ public class Course {
     }
 
     public void displaySummary() {
-        System.out.println("Course " + name + " Ontime=" + getOntime() + " Late=" + getLate() + " Excused=" + getExcused() + " Unexcused=" + getUnexcused());
+        System.out.println( name + " Ontime=" + getOntime() + " Late=" + getLate() + " Excused=" + getExcused() + " Unexcused=" + getUnexcused());
     }
 
         /**

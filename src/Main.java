@@ -39,19 +39,20 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
-
-
-
     } //end of main
 
     }*/
         try {
             Course c1 = new Course();
-            c1.setName("Section 9");
-            System.out.println(c1);
+            c1.setName("Section 9:00 am ");
+            //System.out.println(c1);
 
-            c1.addStudent("Bob", 1);
-            c1.addStudent("Sue", 1);
+            c1.addStudent(1, "Ben");
+            //c1.addStudent(1, "Sue");
+
+            //c1.displaySummary();
+            c1.displayDetailReport();
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
