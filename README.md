@@ -174,3 +174,7 @@ Invalid input! Please enter a number between (1 - 4): 1
 - `Course.java`: Manages the list of students for a particular course section and computes aggregate attendance.
 - `Student.java`: Represents a student's seat assignment, name, and their individual attendance counters.
 - `Input.java`: Utility class containing validation logic for user input via standard `Scanner`.
+
+  **Authors:**
+  Suna2km
+  Sanyam
