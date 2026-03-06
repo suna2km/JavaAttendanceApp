@@ -38,44 +38,67 @@ public class Course {
             throw new Exception("Seat #" + seat + " already assigned to " + student.getName() + "!");
         }
     }
-    public void displaySummaryReport() {
-        int totalOnTime = 0;
-        int totalLate = 0;
-        int totalExcused = 0;
-        int totalUnexcused = 0;
 
-        for (Student student : students) {
-            if (student != null) {
-                totalOnTime += student.getOnTime();
-                totalLate += student.getLate();
-                totalExcused += student.getExcused();
-                totalUnexcused += student.getUnexcused();
-            }
+    public int getOntime() {
+        int totalOntime = 0;
+
+        for (Student student : allStudents) {
+            totalOntime += student.getOntime();
         }
 
-        System.out.printf("%s OnTime=%d Late=%d Excused=%d Unexcused=%d%n",
-                name, totalOnTime, totalLate, totalExcused, totalUnexcused);
+        return totalOntime;
+    }
+    public int getLate() {
+        int totalLate = 0;
+
+        for (Student student : allStudents) {
+            totalLate += student.getLate();
+        }
+
+        return totalLate;
+    }
+    public int getExcused() {
+        int totalExcused = 0;
+
+        for (Student student : allStudents) {
+            totalExcused += student.getExcused();
+        }
+
+        return totalExcused;
+    }
+    public int getUnexcused() {
+        int totalUnexcused = 0;
+
+        for (Student student : allStudents) {
+            totalUnexcused += student.getUnexcused();
+        }
+
+        return totalUnexcused;
     }
 
-    /**
-     * Displays a detailed attendance report for all students in the course.
-     */
+    public void displaySummary() {
+        System.out.println("Course " + name + " Ontime=" + getOntime() + " Late=" + getLate() + " Excused=" + getExcused() + " Unexcused=" + getUnexcused());
+    }
+
+        /**
+         * Displays a detailed attendance report for all students in the course.
+         */
     public void displayDetailReport() {
-        displaySummaryReport(); // Print header
+        displaySummary(); // Print header
 
         System.out.println("Seat   Name            OnTime Late Excused Unexcused");
         System.out.println("==== =============== ====== ==== ======= =========");
 
-        for (Student student : students) {
-            if (student != null) {
+        for (Student student : allStudents) {
+
                 System.out.printf("%4d %-15s %6d %4d %7d %9d%n",
                         student.getSeat(),
                         student.getName(),
-                        student.getOnTime(),
+                        student.getOntime(),
                         student.getLate(),
                         student.getExcused(),
                         student.getUnexcused());
-            }
+
         }
         System.out.println();
     }
