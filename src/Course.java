@@ -30,4 +30,16 @@ public class Course {
         else
             return allStudents.get(index);
     }
+    public void addStudent(String name, int seat) throws Exception {
+        Student student = getStudent(seat);
+        if(student == null) {
+            allStudents.add(new Student(seat, name));
+        } else {
+            throw new Exception("Seat #" + seat + " already assigned to " + student.getName() + "!");
+        }
+    }
+    @Override
+    public String toString() {
+        return name;
+    }
 }
