@@ -56,7 +56,6 @@ public class Student {
     }
 
     public void setName(String name) throws Exception {
-        name = name.trim();
 
         if (name == null || name.isBlank())
             throw new Exception("Student name cannot be Blank");
@@ -86,12 +85,16 @@ public class Student {
 
     public void displayAttendance() {
         System.out.println(this);
-        System.out.println("Ontime = " + onTime + ", " + "Late = " + late + " ," + "Execused = " + excused + ", " + "Unexcused = " + unexcused);
+        System.out.print("Ontime = " + onTime + " ");
+        System.out.print("Late = " + late + " ");
+        System.out.print("Excused = " + excused + " ");
+        System.out.println("Unexcused = " + unexcused);
     }
+
     @Override
     public boolean equals(Object object){
         if(!(object instanceof Student other))
-        return false;
+            return false;
 
         return this.seat == other.getSeat();
     }
@@ -99,6 +102,6 @@ public class Student {
 
     @Override
     public String toString(){
-        return "Seat #" + seat + ", " + name;
+        return "Seat #" + seat + " " + name;
     }
 }
