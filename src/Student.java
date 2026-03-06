@@ -1,5 +1,5 @@
 /**
- * A Basketball Player and the player's stats.
+ * A Student and their attendance status.
  * @author Suna Aregay + Sanyam Sood
  * @since 2026.03.06
  * @version 1.0 beta
